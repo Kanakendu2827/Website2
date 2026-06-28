@@ -339,5 +339,23 @@
             else window.addEventListener('load', hideLoader);
         })();
     </script>
+  <script>
+    document.addEventListener('contextmenu', function(event) {
+      event.preventDefault();
+      alert('Blocked by the organization');
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'F12' ||
+          (event.ctrlKey && event.shiftKey && ['I','J','C'].includes(event.key.toUpperCase())) ||
+          (event.ctrlKey && event.key.toUpperCase() === 'U')) {
+        event.preventDefault();
+        alert('Blocked by the organization');
+      }
+    });
+  </script>
 </body>
 </html>
+
+
+

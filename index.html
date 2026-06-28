@@ -1230,6 +1230,24 @@
         <script>
             (function(){const overlay=document.getElementById('loader-overlay');if(!overlay) return;const minMs=500;const start=Date.now();function hide(){const wait=Math.max(0,minMs-(Date.now()-start));setTimeout(()=>{overlay.classList.add('hidden');overlay.setAttribute('aria-hidden','true');setTimeout(()=>overlay.remove(),450);},wait);} if(document.readyState==='complete') hide(); else window.addEventListener('load', hide);} )();
         </script>
+  <script>
+    document.addEventListener('contextmenu', function(event) {
+      event.preventDefault();
+      alert('Blocked by the organization');
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'F12' ||
+          (event.ctrlKey && event.shiftKey && ['I', 'J', 'C'].includes(event.key.toUpperCase())) ||
+          (event.ctrlKey && event.key.toUpperCase() === 'U')) {
+        event.preventDefault();
+        alert('Blocked by the organization');
+      }
+    });
+  </script>
 </body>
 </html>
+
+
+
 

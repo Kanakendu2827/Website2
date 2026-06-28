@@ -245,5 +245,24 @@
         <p style="font-size:16px;opacity:0.9;line-height:1.8;">&copy; 2026 Mariners Onside Official Store • All Rights Reserved • Passion Finds Its Home Created By • Kanakendu Das</p>
         <p style="margin-top:8px;opacity:0.8;">Follow us on social for restocks and drops.</p>
     </footer>
+  <script>
+    document.addEventListener('contextmenu', function(event) {
+      event.preventDefault();
+      alert('Blocked by the organization');
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'F12' ||
+          (event.ctrlKey && event.shiftKey && ['I','J','C'].includes(event.key.toUpperCase())) ||
+          (event.ctrlKey && event.key.toUpperCase() === 'U')) {
+        event.preventDefault();
+        alert('Blocked by the organization');
+      }
+    });
+  </script>
 </body>
 </html>
+
+
+
+
