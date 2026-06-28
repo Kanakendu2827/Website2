@@ -328,9 +328,25 @@ blend of competition and community spirit."</h3>
   </div>
 
   <script>
-  <script>
-    (function(){const overlay=document.getElementById('loader-overlay');const minMs=500;const start=Date.now();function hide(){const wait=Math.max(0,minMs-(Date.now()-start));setTimeout(()=>{if(!overlay) return;overlay.style.transition='opacity .4s ease';overlay.style.opacity='0';overlay.setAttribute('aria-hidden','true');setTimeout(()=>overlay.remove(),450);},wait);}if(document.readyState==='complete') hide(); else window.addEventListener('load', hide);} )();
-  </script>
+    (function(){
+      const overlay = document.getElementById('loader-overlay');
+      if(!overlay) return;
+      const minMs = 500;
+      const start = Date.now();
+      function hide(){
+        const wait = Math.max(0, minMs - (Date.now() - start));
+        setTimeout(()=>{
+          if(!overlay) return;
+          overlay.style.transition = 'opacity .4s ease';
+          overlay.style.opacity = '0';
+          overlay.setAttribute('aria-hidden','true');
+          setTimeout(()=> overlay.remove(), 450);
+        }, wait);
+      }
+      if(document.readyState === 'complete') hide(); else window.addEventListener('load', hide);
+    })();
+
+    // Lightbox
     const items = document.querySelectorAll('.gallery-item img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
