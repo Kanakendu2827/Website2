@@ -652,8 +652,19 @@
                 padding-top: 2.5rem;
             }
 
+            .hero-panel {
+                width: 100%;
+                padding: 2.5rem 1.75rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
             .hero-stat-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1rem;
             }
 
             .membership-boxes {
@@ -664,12 +675,20 @@
         @media (max-width: 720px) {
             .top-bar {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: stretch;
+                gap: 0.75rem;
+            }
+
+            .top-bar span {
+                width: 100%;
+                text-align: left;
+                font-size: 0.88rem;
             }
 
             .nav-inner {
                 flex-direction: column;
                 align-items: stretch;
+                gap: 0.75rem;
             }
 
             .nav-links {
@@ -678,10 +697,9 @@
                 align-items: stretch;
                 justify-content: flex-start;
                 display: none;
-                gap: 0.35rem;
-                padding: 0.8rem 0;
-                overflow: visible;
-                background: rgba(2, 5, 4, 0.96);
+                gap: 0.65rem;
+                padding: 0.95rem 0.75rem;
+                background: rgba(2, 5, 4, 0.98);
                 border-top: 1px solid rgba(34, 214, 98, 0.14);
             }
 
@@ -700,15 +718,16 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                background: rgba(255,255,255,0.04);
-                border-radius: 16px;
-                padding: 0.85rem 1rem;
+                background: rgba(255,255,255,0.06);
+                border-radius: 18px;
+                padding: 0.95rem 1rem;
                 white-space: normal;
                 overflow: visible;
+                border: 1px solid rgba(255,255,255,0.08);
             }
 
             .dropdown-toggle i {
-                margin-left: 0.5rem;
+                margin-left: 0.7rem;
             }
 
             .dropdown-content {
@@ -721,15 +740,68 @@
                 box-shadow: none;
                 border: 1px solid rgba(255,255,255,0.08);
                 overflow: visible;
+                background: rgba(2, 5, 4, 0.98);
             }
 
             .dropdown-content a {
-                padding-left: 1.3rem;
+                padding-left: 1.35rem;
             }
 
             .nav-toggle {
                 display: inline-flex;
                 align-self: flex-end;
+                padding: 0.85rem 1rem;
+            }
+
+            .hero-panel {
+                padding: 2.4rem 1.4rem;
+                border-radius: 28px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                padding: 1rem 1.1rem;
+                text-align: center;
+            }
+
+            .hero-stat-grid {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+
+            .hero-stat {
+                padding: 1rem 0.9rem;
+            }
+
+            .membership-section {
+                padding: 2rem 1.3rem 1.5rem;
+            }
+
+            .section-heading {
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            .section-heading h2 {
+                font-size: 2.3rem;
+            }
+
+            .membership-boxes {
+                gap: 1.25rem;
+            }
+
+            .box {
+                padding: 1.9rem 1.4rem;
+            }
+
+            .carousel-container {
+                max-width: 100%;
             }
 
             .img-hero {
@@ -739,23 +811,39 @@
 
         @media (max-width: 600px) {
             .club-name {
-                font-size: 2.7rem;
+                font-size: 2.5rem;
             }
 
             .hero-panel {
-                padding: 2rem;
+                padding: 1.95rem 1.2rem;
             }
 
             .hero-actions {
-                flex-direction: column;
+                margin-bottom: 1.5rem;
             }
 
             .hero-stat-grid {
                 grid-template-columns: 1fr;
             }
 
+            .hero-stat strong {
+                font-size: 1.75rem;
+            }
+
+            .hero-stat span {
+                font-size: 0.92rem;
+            }
+
             .section-heading h2 {
                 font-size: 2rem;
+            }
+
+            .membership-boxes {
+                gap: 1rem;
+            }
+
+            .box {
+                padding: 1.7rem 1.2rem;
             }
         }
 
@@ -770,8 +858,61 @@
                 padding: 0.85rem 1rem;
             }
 
+            .top-bar span {
+                font-size: 0.82rem;
+            }
+
             .social-links a {
-                margin-left: 0.8rem;
+                margin-left: 0.65rem;
+                font-size: 1rem;
+            }
+
+            .hero {
+                padding: 1.75rem 1rem 2rem;
+            }
+
+            .hero-panel {
+                padding: 1.55rem 1rem;
+                border-radius: 24px;
+            }
+
+            .hero-panel h1 {
+                font-size: 2.35rem;
+            }
+
+            .hero-panel p {
+                font-size: 0.98rem;
+            }
+
+            .hero-actions {
+                gap: 0.75rem;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 0.95rem 1rem;
+            }
+
+            .membership-section {
+                padding: 1.5rem 1rem 1.25rem;
+            }
+
+            .section-heading h2 {
+                font-size: 1.8rem;
+            }
+
+            .box {
+                padding: 1.35rem 1rem;
+            }
+
+            .carousel-container {
+                border-radius: 20px;
+            }
+
+            .controls button {
+                width: 34px;
+                height: 34px;
+                font-size: 0.95rem;
             }
         }
 
@@ -901,8 +1042,8 @@
             <div class="slides">
                 <div class="slide"><a href="store.html"><img src="Ad11.png" alt="Advertisement 1"></a></div>
                 <div class="slide"><a href="store.html"><img src="Ad12.jpg" alt="Advertisement 2"></a></div>
-                <div class="slide"><a href="store.html"><img src="Ad 13.jpg" alt="Advertisement 3"></a></div>
-                <div class="slide"><a href="store.html"><img src="Ad 14.jpg" alt="Advertisement 4"></a></div>
+                <div class="slide"><a href="store.html"><img src="Ad%2013.jpg" alt="Advertisement 3"></a></div>
+                <div class="slide"><a href="store.html"><img src="Ad%2014.jpg" alt="Advertisement 4"></a></div>
             </div>
             <div class="controls">
                 <button class="prev" type="button" aria-label="Previous slide">‹</button>
@@ -925,15 +1066,18 @@
             setTimeout(() => loader.remove(), 500);
         });
 
+        const isTouchCapable = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
         document.querySelectorAll('.dropdown').forEach(dropdown => {
             const toggle = dropdown.querySelector('.dropdown-toggle');
             const content = dropdown.querySelector('.dropdown-content');
 
-            dropdown.addEventListener('mouseenter', () => dropdown.classList.add('active'));
-            dropdown.addEventListener('mouseleave', () => dropdown.classList.remove('active'));
+            if (!isTouchCapable) {
+                dropdown.addEventListener('mouseenter', () => dropdown.classList.add('active'));
+                dropdown.addEventListener('mouseleave', () => dropdown.classList.remove('active'));
+            }
 
             toggle.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 768 || isTouchCapable) {
                     e.preventDefault();
                     const isActive = dropdown.classList.contains('active');
                     document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
@@ -960,8 +1104,11 @@
             });
 
             navLinks.querySelectorAll('a').forEach(a => {
-                a.addEventListener('click', () => {
+                a.addEventListener('click', (event) => {
                     if (window.innerWidth <= 768) {
+                        if (a.classList.contains('dropdown-toggle')) {
+                            return;
+                        }
                         navLinks.classList.remove('show');
                         navToggle.setAttribute('aria-expanded','false');
                     }
